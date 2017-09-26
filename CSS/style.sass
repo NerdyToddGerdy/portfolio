@@ -14,9 +14,9 @@
 // above code aquired from 'https://medium.freecodecamp.com/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862'
 
 $color-one: #1d1c28
-$color-two: #b77021
-$color-three: green
-$color-four: silver
+$color-two: #FF851B
+$color-three: #2ECC40
+$color-four: #DDDDDD
 
 body
   background-color: transparentize($color-one, .15)
@@ -62,11 +62,22 @@ body
       h2
         color: $color-two
         #about
-          
+
           color: $color-three
       p
         a
           color: $color-three
     #contact
-
+      padding: 7% 3% 0 0
+      ul
+        display: flex
+        flex-direction: column
+        li
+          list-style: none
+          a
+            color: $color-two
+            font-size: 1.25em
+            i
+              color: $color-three
+              padding-right: 3%
   @include for-size(tablet-portrait-up)
