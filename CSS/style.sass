@@ -1,0 +1,71 @@
+@mixin for-size($size)
+  @if $size == phone-only
+    @media (max-width: 599px)
+      @content
+  @else if $size == tablet-portrait-up
+    @media (min-width: 600px)
+      @content
+  @else if $size == tablet-landscape-up
+    @media (min-width: 900px)
+      @content
+  @else if $size == desktop-up
+    @media (min-width: 1200px)
+      @content
+// above code aquired from 'https://medium.freecodecamp.com/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862'
+
+$color-one: #1d1c28
+$color-two: #b77021
+$color-three: green
+$color-four: silver
+
+body
+  background-color: transparentize($color-one, .15)
+  margin: 0
+  font-family: 'Audiowide', cursive
+  header
+    background-color: $color-one
+    text-align: center
+    border: 5px ridge $color-three
+    border-radius: 0 0 15px 15px
+    h1
+      margin: 0
+      color: $color-two
+      span
+        color: $color-three
+    h2
+      color: $color-four
+      #av
+        color: $color-two
+      #web-dev
+        color: $color-three
+    ul
+      color: $color-four
+      list-style: none
+      display: flex
+      justify-content: space-around
+      flex-direction: row
+  @include for-size(phone-only)
+    header
+      h1
+        font-size: 2.25em
+      ul
+        padding: 0
+        li
+          text-decoration: underline
+          color: $color-three
+          .capital
+            color: $color-two
+
+    #bio
+      padding: 0 3%
+      color: $color-four
+      h2
+        color: $color-two
+        #about
+          color: $color-three
+      p
+        a
+          color: $color-three
+    #contact
+      
+  @include for-size(tablet-portrait-up)

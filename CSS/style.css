@@ -1,0 +1,47 @@
+body {
+  background-color: rgba(29, 28, 40, 0.85);
+  margin: 0;
+  font-family: "Audiowide", cursive; }
+  body header {
+    background-color: #1d1c28;
+    text-align: center;
+    border: 5px ridge green;
+    border-radius: 0 0 15px 15px; }
+    body header h1 {
+      margin: 0;
+      color: #b77021; }
+      body header h1 span {
+        color: green; }
+    body header h2 {
+      color: silver; }
+      body header h2 #av {
+        color: #b77021; }
+      body header h2 #web-dev {
+        color: green; }
+    body header ul {
+      color: silver;
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: row; }
+  @media (max-width: 599px) {
+    body header h1 {
+      font-size: 2.25em; }
+    body header ul {
+      padding: 0; }
+      body header ul li {
+        text-decoration: underline;
+        color: green; }
+        body header ul li .capital {
+          color: #b77021; }
+    body #bio {
+      padding: 0 3%;
+      color: silver; }
+      body #bio h2 {
+        color: #b77021; }
+        body #bio h2 #about {
+          color: green; }
+      body #bio p a {
+        color: green; } }
+
+/*# sourceMappingURL=style.css.map */
