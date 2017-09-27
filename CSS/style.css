@@ -41,8 +41,10 @@ body {
         color: #FF851B; }
         body #bio h2 #about {
           color: #2ECC40; }
-      body #bio p a {
-        color: #2ECC40; }
+      body #bio p {
+        font-family: serif; }
+        body #bio p a {
+          color: #2ECC40; }
     body #contact {
       padding: 7% 3% 0 0; }
       body #contact ul {
