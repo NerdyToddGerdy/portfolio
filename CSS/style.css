@@ -34,6 +34,27 @@ body {
         color: #2ECC40; }
         body header ul li .capital {
           color: #FF851B; }
+    body .terminal {
+      margin-top: 1%;
+      background: black;
+      color: white; }
+      body .terminal h1 {
+        font-family: monospace;
+        overflow: hidden;
+        border-right: 0.15em solid orange;
+        letter-spacing: 0.15em solid orange;
+        white-space: nowrap;
+        animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite; }
+    @keyframes typing {
+      from {
+        width: 0; }
+      to {
+        width: 100%; } }
+    @keyframes blink-caret {
+      from, to {
+        border-color: transparent; }
+      50% {
+        border-color: orange; } }
     body #bio {
       padding: 0 3%;
       color: #DDDDDD; }
