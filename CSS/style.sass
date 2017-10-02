@@ -18,13 +18,46 @@ $color-two: #FF851B
 $color-three: #2ECC40
 $color-four: #DDDDDD
 
+// typewriter in header
+.string-highlight
+  color: $color-two
+.var-highlight
+  color: $color-three
+.string-highlight
+  color: rgba(253, 149, 90, 0.8)
+#typewriter
+  color: $color-four
+  font-size: 1em
+  margin: 0
+  font-family: "Courier New"
+  &:after
+    content: "|"
+    animation: blink 500ms linear infinite alternate
+  @-webkit-keyframes blink
+    0%
+      opacity: 0
+    100%
+      opacity: 1
+  @-moz-keyframes blink
+    0%
+      opacity: 0
+    100%
+      opacity: 1
+  @keyframes blink
+    0%
+      opacity: 0
+    100%
+      opacity: 1
+// end typewriter in header
+
+
 body
   background-color: transparentize($color-one, .15)
   margin: 0
   font-family: 'Audiowide', cursive
   header
     background-color: $color-one
-    text-align: center
+    text-align: left
     border: 5px ridge $color-three
     border-radius: 0 0 15px 15px
     h1
@@ -33,6 +66,8 @@ body
       span
         color: $color-three
     h2
+      font-size: 1.5em
+      margin: 0
       color: $color-four
       #av
         color: $color-two
@@ -53,13 +88,14 @@ body
         li
           text-decoration: underline
           color: $color-three
-          .capital
-            color: $color-two
+    .capital
+      color: $color-two 
     .terminal
       margin-top: 1%
       background: black
       color: white
       h1
+        font-size: 1em
         font-family: monospace
         overflow: hidden
         border-right: .15em solid orange
@@ -77,7 +113,7 @@ body
           from, to
             border-color: transparent
           50%
-            border-color: orange
+            border-color: $color-two
     #bio
       padding: 0 3%
       color: $color-four
@@ -92,6 +128,11 @@ body
           color: $color-three
     #contact
       padding: 7% 3% 0 0
+      h2
+        color: $color-two
+        margin: 0
+        #about
+          color: $color-three
       ul
         display: flex
         flex-direction: column
@@ -103,4 +144,15 @@ body
             i
               color: $color-three
               padding-right: 3%
+    #resume
+      padding: 7% 3% 0 0
+      color: $color-three
+      ul
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: space-between
+        li
+          list-style: none
+          // width: 100%
   @include for-size(tablet-portrait-up)

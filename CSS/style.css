@@ -1,10 +1,42 @@
+.string-highlight {
+  color: #FF851B; }
+
+.var-highlight {
+  color: #2ECC40; }
+
+.string-highlight {
+  color: rgba(253, 149, 90, 0.8); }
+
+#typewriter {
+  color: #DDDDDD;
+  font-size: 1em;
+  margin: 0;
+  font-family: "Courier New"; }
+  #typewriter:after {
+    content: "|";
+    animation: blink 500ms linear infinite alternate; }
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes blink {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes blink {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 body {
   background-color: rgba(29, 28, 40, 0.85);
   margin: 0;
   font-family: "Audiowide", cursive; }
   body header {
     background-color: #1d1c28;
-    text-align: center;
+    text-align: left;
     border: 5px ridge #2ECC40;
     border-radius: 0 0 15px 15px; }
     body header h1 {
@@ -13,6 +45,8 @@ body {
       body header h1 span {
         color: #2ECC40; }
     body header h2 {
+      font-size: 1.5em;
+      margin: 0;
       color: #DDDDDD; }
       body header h2 #av {
         color: #FF851B; }
@@ -32,13 +66,14 @@ body {
       body header ul li {
         text-decoration: underline;
         color: #2ECC40; }
-        body header ul li .capital {
-          color: #FF851B; }
+    body .capital {
+      color: #FF851B; }
     body .terminal {
       margin-top: 1%;
       background: black;
       color: white; }
       body .terminal h1 {
+        font-size: 1em;
         font-family: monospace;
         overflow: hidden;
         border-right: 0.15em solid orange;
@@ -54,7 +89,7 @@ body {
       from, to {
         border-color: transparent; }
       50% {
-        border-color: orange; } }
+        border-color: #FF851B; } }
     body #bio {
       padding: 0 3%;
       color: #DDDDDD; }
@@ -68,6 +103,11 @@ body {
           color: #2ECC40; }
     body #contact {
       padding: 7% 3% 0 0; }
+      body #contact h2 {
+        color: #FF851B;
+        margin: 0; }
+        body #contact h2 #about {
+          color: #2ECC40; }
       body #contact ul {
         display: flex;
         flex-direction: column; }
@@ -78,6 +118,16 @@ body {
             font-size: 1.25em; }
             body #contact ul li a i {
               color: #2ECC40;
-              padding-right: 3%; } }
+              padding-right: 3%; }
+    body #resume {
+      padding: 7% 3% 0 0;
+      color: #2ECC40; }
+      body #resume ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between; }
+        body #resume ul li {
+          list-style: none; } }
 
 /*# sourceMappingURL=style.css.map */
